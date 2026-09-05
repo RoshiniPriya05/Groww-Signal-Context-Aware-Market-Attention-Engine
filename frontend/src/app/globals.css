@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0f0e;
+  --foreground: #f5f7f6;
+  --surface: #111817;
+  --surface-elevated: #151c1a;
+  --border: #26312e;
+  --muted: #9aa6a2;
+  --groww: #00d09c;
+  --groww-dim: #00b386;
+  --loss: #ff4d5a;
+  --attention: #f5b83d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-groww: var(--groww);
+  --color-groww-dim: var(--groww-dim);
+  --color-loss: var(--loss);
+  --color-attention: var(--attention);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  background:
+    radial-gradient(circle at top, rgba(0, 208, 156, 0.08), transparent 34%),
+    linear-gradient(180deg, #0b0f0e 0%, #111817 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
+
+.stock-card {
+  background: linear-gradient(180deg, rgba(18, 24, 29, 0.98), rgba(14, 19, 23, 0.88));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.stock-card.critical {
+  border-color: rgba(255, 89, 109, 0.5);
+  box-shadow: 0 0 0 1px rgba(255, 89, 109, 0.18), 0 12px 28px rgba(255, 89, 109, 0.12);
+}
+
+.stock-card.watch {
+  border-color: rgba(255, 191, 105, 0.45);
+  box-shadow: 0 0 0 1px rgba(255, 191, 105, 0.12), 0 10px 22px rgba(255, 191, 105, 0.08);
+}
+
+.stock-card.low {
+  border-color: rgba(122, 231, 185, 0.38);
+  box-shadow: 0 0 0 1px rgba(122, 231, 185, 0.1), 0 8px 18px rgba(122, 231, 185, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
